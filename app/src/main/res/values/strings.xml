@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PERPUS</string>
+    <string name="new_user_signup"><b>SignUp?</b></string>
+    <string name="name">name</string>
+    <string name="names">names</string>
+    <string name="Registration">Registration</string>
+    <string name="email_subject_hint" />
+</resources>
