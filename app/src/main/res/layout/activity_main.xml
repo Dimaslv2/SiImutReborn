@@ -31,8 +31,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:text="Login"
-        android:layout_above="@id/skipBtn"
         android:textColor="@color/white"
+        android:layout_marginTop="575dp"
         />
 
     <Button
@@ -43,6 +43,17 @@
         android:text="Continue"
         android:textColor="@color/purple_500"
         android:background="@drawable/shape_button02"
+        />
+
+    <Button
+        android:id="@+id/UserBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="User"
+        android:textColor="@color/purple_500"
+        android:background="@drawable/shape_button02"
+        android:layout_marginBottom="50dp"
         />
 
 </RelativeLayout>
