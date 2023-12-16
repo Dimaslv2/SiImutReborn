@@ -20,7 +20,13 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.skipBtn.setOnClickListener {
+            startActivity(Intent(this, DashboardAdminActivity::class.java))
+
+        }
+
+        binding.UserBtn.setOnClickListener {
             startActivity(Intent(this, DashboardUserActivity::class.java))
+
         }
     }
 }

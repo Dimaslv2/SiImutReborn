@@ -90,13 +90,14 @@ class LoginActivity : AppCompatActivity() {
                     val userType = snapshot.child("userType").value
                     if (userType == "user"){
                         //user
-                        startActivity(Intent(this@LoginActivity, DashboardUserActivity::class.java))
+                        startActivity(Intent(this@LoginActivity, DashboardAdminActivity::class.java))
                         finish()
                     }
                     else if (userType == "admin"){
                         //admin
                         startActivity(Intent(this@LoginActivity, DashboardAdminActivity::class.java))
                         finish()
+
                     }
                 }
 

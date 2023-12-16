@@ -22,7 +22,7 @@ class CategoryAddActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCategoryAddBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_category_add)
+        setContentView(binding.root)
 
         //init //firebase
         firebaseAuth = FirebaseAuth.getInstance()
@@ -66,7 +66,7 @@ class CategoryAddActivity : AppCompatActivity() {
         val hashMap = HashMap<String, Any>()
         hashMap["id"] = "$timestamp"
         hashMap["category"] = category
-        hashMap["timestap"] = timestamp
+        hashMap["timestamp"] = timestamp
         hashMap["uid"] = "${firebaseAuth.uid}"
 
         //add to firebase
