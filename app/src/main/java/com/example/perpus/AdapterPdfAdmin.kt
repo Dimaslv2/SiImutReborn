@@ -4,21 +4,26 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.view.menu.ActionMenuItemView
+import android.widget.Filter
+import android.widget.Filterable
 import androidx.recyclerview.widget.RecyclerView
 import com.example.perpus.databinding.RowPdfAdminBinding
 
-class AdapterPdfAdmin : RecyclerView.Adapter<AdapterPdfAdmin.HolderPdfAdmin> {
+class AdapterPdfAdmin : RecyclerView.Adapter<AdapterPdfAdmin.HolderPdfAdmin>, Filterable {
 
     private var context: Context
 
-    private  var pdfArrayList: Array<ModelPdf>
+    public var pdfArrayList: ArrayList<ModelPdf>
+    private val filterList:ArrayList<ModelPdf>
 
     private lateinit var binding:RowPdfAdminBinding
 
-    constructor(context: Context, pdfArrayList: Array<ModelPdf>) : super() {
+    var filter: FilterPdfAdmin? = null
+
+    constructor(context: Context, pdfArrayList: ArrayList<ModelPdf>) : super() {
         this.context = context
         this.pdfArrayList = pdfArrayList
+        this.filterList = pdfArrayList
     }
 
 
@@ -32,25 +37,48 @@ class AdapterPdfAdmin : RecyclerView.Adapter<AdapterPdfAdmin.HolderPdfAdmin> {
     override fun onBindViewHolder(holder: HolderPdfAdmin, position: Int) {
         val model = pdfArrayList[position]
         val pdfId = model.id
-        val category = model.categoryId
+        val categoryId = model.categoryId
         val title = model.title
         val descrption = model.description
         val pdfUrl = model.url
         val timestamp = model.timestamp
 
+        //convert timestamp to dd/MM/yyyy format
+        val formattedDate = MyApplication.formatTimeStamp(timestamp)
+
+        //set data
+        holder.titleTv.text = title
+        holder.descriptionTv.text = descrption
+        holder.dateTv.text = formattedDate
+
+        //category id
+        MyApplication.loadCategory(categoryId, holder.categoryTv)
+
+        MyApplication.loadPdfFromUrlSinglePage(pdfUrl, title, holder.pdfView, holder.progressBar, null)
+
+        MyApplication.loadPdfSize(pdfUrl, title, holder.sizeTv)
 
     }
 
     override fun getItemCount(): Int {
         return pdfArrayList.size
     }
+
+
+    override fun getFilter(): Filter {
+        if (filter == null){
+            filter = FilterPdfAdmin(filterList, this)
+        }
+        return  filter as FilterPdfAdmin
+    }
+
     inner class HolderPdfAdmin(itemView: View) : RecyclerView.ViewHolder(itemView){
         //ui views row_pdf_admin.xml
         val pdfView = binding.pdfView
         val progressBar = binding.progressBar
         val titleTv = binding.tittleTv
         val descriptionTv = binding.descriptionTv
-        val category = binding.categoryTv
+        val categoryTv = binding.categoryTv
         val sizeTv = binding.sizeTv
         val dateTv = binding.dateTv
         val moreBtn = binding.moreBtn
