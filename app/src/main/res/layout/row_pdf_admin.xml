@@ -20,15 +20,16 @@
             android:background="@color/gray02">
 
             <com.github.barteksc.pdfviewer.PDFView
+                android:id="@+id/pdfView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <ProgressBar
                 android:id="@+id/progressBar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
 
-
-
-
         </RelativeLayout>
-
 
         <!--pdf View-->
         <TextView
@@ -70,9 +71,18 @@
             android:layout_alignParentBottom="true"
             android:layout_toEndOf="@+id/pdfRl"
             android:maxLines="1"
-            android:text="Ini Ukuran Buku 13TB"/>
+            android:text="13TB"/>
 
-
+        <TextView
+            android:id="@+id/dateTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@id/categoryTv"
+            android:layout_toEndOf="@id/sizeTv"
+            android:maxLines="1"
+            android:text="dd/MM/yyyy"
+            android:textAlignment="center"/>
 
         <ImageButton
             android:id="@+id/moreBtn"
