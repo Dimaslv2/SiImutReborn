@@ -72,7 +72,7 @@ class AdapterCategory :RecyclerView.Adapter<AdapterCategory.HolderCategory>, Fil
         holder.itemView.setOnClickListener {
             val intent = Intent(context, PdfListAdminActivity::class.java)
             intent.putExtra("categoryId", id)
-            intent.putExtra("categoryId", category)
+            intent.putExtra("category", category)
             context.startActivity(intent)
 
         }

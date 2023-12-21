@@ -28,7 +28,8 @@ class PdfListAdminActivity : AppCompatActivity() {
     private lateinit var adapterPdfAdmin: AdapterPdfAdmin
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_pdf_list_admin)
+        binding = ActivityPdfListAdminBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         val intent = intent
         categoryId = intent.getStringExtra("categoryId")!!

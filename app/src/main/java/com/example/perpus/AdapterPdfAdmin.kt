@@ -41,7 +41,7 @@ class AdapterPdfAdmin : RecyclerView.Adapter<AdapterPdfAdmin.HolderPdfAdmin>, Fi
         val pdfId = model.id
         val categoryId = model.categoryId
         val title = model.title
-        val descrption = model.description
+        val description = model.description
         val pdfUrl = model.url
         val timestamp = model.timestamp
 
@@ -50,7 +50,7 @@ class AdapterPdfAdmin : RecyclerView.Adapter<AdapterPdfAdmin.HolderPdfAdmin>, Fi
 
         //set data
         holder.titleTv.text = title
-        holder.descriptionTv.text = descrption
+        holder.descriptionTv.text = description
         holder.dateTv.text = formattedDate
 
         //category id
