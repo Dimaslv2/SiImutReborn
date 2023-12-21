@@ -29,8 +29,6 @@ class AdapterPdfAdmin : RecyclerView.Adapter<AdapterPdfAdmin.HolderPdfAdmin>, Fi
     }
 
 
-
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HolderPdfAdmin {
         binding = RowPdfAdminBinding.inflate(LayoutInflater.from(context), parent, false)
         return HolderPdfAdmin(binding.root)

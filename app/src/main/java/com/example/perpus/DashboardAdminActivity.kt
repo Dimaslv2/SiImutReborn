@@ -38,7 +38,7 @@ class DashboardAdminActivity : AppCompatActivity() {
         //search
         binding.searchEt.addTextChangedListener(object: TextWatcher{
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                TODO("Not yet implemented")
+
             }
 
             override fun onTextChanged(s: CharSequence?, p1: Int, p2: Int, p3: Int) {
@@ -52,7 +52,7 @@ class DashboardAdminActivity : AppCompatActivity() {
             }
 
             override fun afterTextChanged(p0: Editable?) {
-                TODO("Not yet implemented")
+
             }
         })
 

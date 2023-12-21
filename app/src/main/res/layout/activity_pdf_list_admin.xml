@@ -58,7 +58,7 @@
         android:padding="10dp"
         android:hint="Search"
         android:textColorHint="@color/gray02"
-        android:textColor="@color/black"/>
+        android:textColor="@color/black" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/booksRv"
