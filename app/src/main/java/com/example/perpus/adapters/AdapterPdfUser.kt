@@ -6,7 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.perpus.activities.PdfDetailActivity
 import com.example.perpus.databinding.RowPdfUserBinding
+import com.example.perpus.filters.FilterPdfUser
+import com.example.perpus.models.ModelPdf
 
 class AdapterPdfUser : RecyclerView.Adapter<AdapterPdfUser.HolderPdfUser>{
 

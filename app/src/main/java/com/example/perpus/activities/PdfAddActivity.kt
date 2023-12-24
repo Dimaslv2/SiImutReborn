@@ -1,4 +1,4 @@
-package com.example.perpus
+package com.example.perpus.activities
 
 import android.app.AlertDialog
 import android.app.ProgressDialog
@@ -11,6 +11,7 @@ import androidx.activity.result.ActivityResultCallback
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.example.perpus.databinding.ActivityPdfAddBinding
+import com.example.perpus.models.ModelCategory
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot

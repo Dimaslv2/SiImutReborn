@@ -1,4 +1,4 @@
-package com.example.perpus
+package com.example.perpus.adapters
 
 import android.app.AlertDialog
 import android.content.Context
@@ -9,7 +9,12 @@ import android.view.ViewGroup
 import android.widget.Filter
 import android.widget.Filterable
 import androidx.recyclerview.widget.RecyclerView
+import com.example.perpus.filters.FilterPdfAdmin
+import com.example.perpus.MyApplication
+import com.example.perpus.activities.PdfDetailActivity
+import com.example.perpus.activities.PdfEditActivity
 import com.example.perpus.databinding.RowPdfAdminBinding
+import com.example.perpus.models.ModelPdf
 
 class AdapterPdfAdmin : RecyclerView.Adapter<AdapterPdfAdmin.HolderPdfAdmin>, Filterable {
 
@@ -54,7 +59,13 @@ class AdapterPdfAdmin : RecyclerView.Adapter<AdapterPdfAdmin.HolderPdfAdmin>, Fi
         //category id
         MyApplication.loadCategory(categoryId, holder.categoryTv)
 
-        MyApplication.loadPdfFromUrlSinglePage(pdfUrl, title, holder.pdfView, holder.progressBar, null)
+        MyApplication.loadPdfFromUrlSinglePage(
+            pdfUrl,
+            title,
+            holder.pdfView,
+            holder.progressBar,
+            null
+        )
 
         MyApplication.loadPdfSize(pdfUrl, title, holder.sizeTv)
 
@@ -70,7 +81,7 @@ class AdapterPdfAdmin : RecyclerView.Adapter<AdapterPdfAdmin.HolderPdfAdmin>, Fi
 
     }
 
-    private fun moreOptionsDialog(model: ModelPdf, holder: AdapterPdfAdmin.HolderPdfAdmin) {
+    private fun moreOptionsDialog(model: ModelPdf, holder: HolderPdfAdmin) {
         val bookId = model.id
         val bookUrl = model.url
         val bookTitle = model.title

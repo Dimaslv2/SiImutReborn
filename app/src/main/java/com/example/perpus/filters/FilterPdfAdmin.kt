@@ -1,6 +1,8 @@
-package com.example.perpus
+package com.example.perpus.filters
 
 import android.widget.Filter
+import com.example.perpus.adapters.AdapterPdfAdmin
+import com.example.perpus.models.ModelPdf
 
 //used to filter data from recyclerview
 class FilterPdfAdmin : Filter {

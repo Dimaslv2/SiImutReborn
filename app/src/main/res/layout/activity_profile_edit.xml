@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileEditActivity">
+    tools:context=".activities.ProfileEditActivity">
 
     <RelativeLayout
         android:id="@+id/toolbarRl"
@@ -31,7 +31,7 @@
             android:layout_centerHorizontal="true"/>
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/profileTv"
+            android:id="@+id/profileIv"
             android:layout_width="110dp"
             android:layout_height="110dp"
             android:layout_centerHorizontal="true"
@@ -40,7 +40,10 @@
             android:src="@drawable/ic_person_gray"
             android:background="@color/white"
             app:shapeAppearanceOverlay="@style/styleRoundedCornersImage"/>
+
     </RelativeLayout>
+
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -67,6 +70,7 @@
                 android:hint="Nama"/>
 
         </com.google.android.material.textfield.TextInputLayout>
+
         <Button
             android:id="@+id/updateBtn"
             android:layout_width="match_parent"

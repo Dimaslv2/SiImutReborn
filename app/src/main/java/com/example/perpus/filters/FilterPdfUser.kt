@@ -1,6 +1,8 @@
-package com.example.perpus
+package com.example.perpus.filters
 
 import android.widget.Filter
+import com.example.perpus.AdapterPdfUser
+import com.example.perpus.models.ModelPdf
 
 class FilterPdfUser: Filter {
     var filterList: ArrayList<ModelPdf>

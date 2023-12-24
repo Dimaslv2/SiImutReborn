@@ -1,12 +1,13 @@
-package com.example.perpus
+package com.example.perpus.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import com.example.perpus.adapters.AdapterCategory
 import com.example.perpus.databinding.ActivityDashboardAdminBinding
-import com.example.perpus.databinding.ActivityLoginBinding
+import com.example.perpus.models.ModelCategory
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -37,7 +38,7 @@ class DashboardAdminActivity : AppCompatActivity() {
 
         //search
         binding.searchEt.addTextChangedListener(object: TextWatcher{
-            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+            override fun beforeTextChanged(s: CharSequence?, p1: Int, p2: Int, p3: Int) {
 
             }
 
@@ -71,6 +72,12 @@ class DashboardAdminActivity : AppCompatActivity() {
         binding.addPdfbtn.setOnClickListener {
             startActivity(Intent(this, PdfAddActivity::class.java))
         }
+        binding.profileBtn.setOnClickListener {
+
+            startActivity(Intent(this, ProfileActivity::class.java))
+        }
+
+
     }
 
     private fun loadCategories() {

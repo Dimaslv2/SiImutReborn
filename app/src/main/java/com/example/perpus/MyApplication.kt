@@ -70,6 +70,8 @@ class MyApplication:Application() {
         ){
             val TAG = "PDF_THUMBNAIL_TAG"
 
+
+
             val ref = FirebaseStorage.getInstance().getReferenceFromUrl(pdfUrl)
             ref.getBytes(Constants.MAX_BYTES_PDF)
                 .addOnSuccessListener {bytes ->

@@ -1,4 +1,4 @@
-package com.example.perpus
+package com.example.perpus.adapters
 
 import android.app.AlertDialog
 import android.content.Context
@@ -7,9 +7,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
-import androidx.appcompat.view.menu.ActionMenuItemView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.perpus.filters.FilterCategory
+import com.example.perpus.activities.PdfListAdminActivity
 import com.example.perpus.databinding.RowCategoryBinding
+import com.example.perpus.models.ModelCategory
 import com.google.firebase.database.FirebaseDatabase
 
 class AdapterCategory :RecyclerView.Adapter<AdapterCategory.HolderCategory>, Filterable {

@@ -1,9 +1,10 @@
-package com.example.perpus
+package com.example.perpus.activities
 
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.example.perpus.Constants
 import com.example.perpus.databinding.ActivityPdfViewBinding
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError

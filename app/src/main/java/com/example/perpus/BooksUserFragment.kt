@@ -4,16 +4,18 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.widget.addTextChangedListener
-import androidx.fragment.app.Fragment
 import com.example.perpus.databinding.FragmentBookUserBinding
+import com.example.perpus.models.ModelPdf
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import java.lang.Exception
 
 
 class BooksUserFragment : Fragment {
@@ -62,6 +64,9 @@ class BooksUserFragment : Fragment {
             loadAllBooks()
 
         }
+        else if (category == "Most Viewed"){
+            loadMostViewedBooks("viewsCount")
+        }
         else{
             loadCategorizedBooks()
         }
@@ -72,7 +77,7 @@ class BooksUserFragment : Fragment {
             }
             override fun onTextChanged(s: CharSequence?, p1: Int, p2: Int, p3: Int) {
                 try {
-                    adapterPdfUser.filter!!.filter(s)
+                    adapterPdfUser.filter?.filter(s)
                 }
                 catch (e: Exception){
                     Log.d(TAG, "onTextChanged: SEARCH EXCEPTION: ${e.message}")

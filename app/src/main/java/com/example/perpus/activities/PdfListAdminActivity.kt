@@ -1,11 +1,13 @@
-package com.example.perpus
+package com.example.perpus.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
+import com.example.perpus.adapters.AdapterPdfAdmin
 import com.example.perpus.databinding.ActivityPdfListAdminBinding
+import com.example.perpus.models.ModelPdf
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase

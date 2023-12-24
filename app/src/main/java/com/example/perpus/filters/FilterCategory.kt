@@ -1,6 +1,8 @@
-package com.example.perpus
+package com.example.perpus.filters
 
 import android.widget.Filter
+import com.example.perpus.adapters.AdapterCategory
+import com.example.perpus.models.ModelCategory
 
 class FilterCategory: Filter {
 
@@ -24,7 +26,6 @@ class FilterCategory: Filter {
 
             //chane to uppercase or lowercase to avoid case sensitive
             constraint = constraint.toString().uppercase()
-
             val filteredModel:ArrayList<ModelCategory> = ArrayList()
             for (i in 0 until filterList.size){
                 //validate
@@ -47,5 +48,7 @@ class FilterCategory: Filter {
     override fun publishResults(constraint: CharSequence?, results: FilterResults) {
         //apply filter changes
         adapterCategory.categoryArrayList = results.values as ArrayList<ModelCategory>
+
+        adapterCategory.notifyDataSetChanged()
     }
 }

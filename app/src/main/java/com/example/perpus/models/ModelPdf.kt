@@ -1,4 +1,4 @@
-package com.example.perpus
+package com.example.perpus.models
 
 class ModelPdf {
 
@@ -11,7 +11,6 @@ class ModelPdf {
     var url:String = ""
     var timestamp:Long = 0
     var viewsCount:Long = 0
-    var downloadsCount:Long = 0
 
     //empty constructor
     constructor()
@@ -26,7 +25,6 @@ class ModelPdf {
         url: String,
         timestamp: Long,
         viewsCount: Long,
-        downloadsCount: Long
     ) {
         this.uid = uid
         this.id = id
@@ -36,7 +34,6 @@ class ModelPdf {
         this.url = url
         this.timestamp = timestamp
         this.viewsCount = viewsCount
-        this.downloadsCount = downloadsCount
     }
 
 }

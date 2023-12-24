@@ -1,4 +1,4 @@
-package com.example.perpus
+package com.example.perpus.activities
 
 import android.app.ProgressDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -31,6 +31,10 @@ class CategoryAddActivity : AppCompatActivity() {
         progressDialog = ProgressDialog(this)
         progressDialog.setTitle("Please Wait...")
         progressDialog.setCanceledOnTouchOutside(false)
+
+        binding.backBtn.setOnClickListener {
+            onBackPressed()
+        }
 
         //handle click, go back
         binding.submitBtn.setOnClickListener {

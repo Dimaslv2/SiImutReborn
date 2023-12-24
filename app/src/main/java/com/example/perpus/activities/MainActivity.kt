@@ -1,4 +1,4 @@
-package com.example.perpus
+package com.example.perpus.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

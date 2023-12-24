@@ -1,4 +1,4 @@
-package com.example.perpus
+package com.example.perpus.models
 
 class ModelCategory {
 

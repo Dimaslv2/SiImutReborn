@@ -1,8 +1,9 @@
-package com.example.perpus
+package com.example.perpus.activities
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.perpus.MyApplication
 import com.example.perpus.databinding.ActivityPdfDetailBinding
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -33,7 +34,7 @@ class PdfDetailActivity : AppCompatActivity() {
         }
 
         binding.readBookBtn.setOnClickListener {
-            val intent = Intent(this,PdfViewActivity::class.java)
+            val intent = Intent(this, PdfViewActivity::class.java)
             intent.putExtra("bookId", bookId);
             startActivity(intent)
         }

@@ -1,4 +1,4 @@
-package com.example.perpus
+package com.example.perpus.activities
 
 import android.content.Context
 import android.content.Intent
@@ -10,7 +10,11 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager.widget.ViewPager
+import com.example.perpus.BooksUserFragment
+import com.example.perpus.activities.MainActivity
+import com.example.perpus.adapters.AdapterCategory
 import com.example.perpus.databinding.ActivityDashboardUserBinding
+import com.example.perpus.models.ModelCategory
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -46,6 +50,11 @@ class DashboardUserActivity : AppCompatActivity() {
             finish()
 
         }
+        binding.profileBtn.setOnClickListener {
+
+            startActivity(Intent(this, ProfileActivity::class.java))
+        }
+
 
     }
 

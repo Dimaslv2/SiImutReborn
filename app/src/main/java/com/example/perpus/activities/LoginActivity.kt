@@ -1,4 +1,4 @@
-package com.example.perpus
+package com.example.perpus.activities
 
 import android.app.ProgressDialog
 import android.content.Intent
