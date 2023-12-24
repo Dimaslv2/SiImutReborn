@@ -9,4 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="gray1">#c5c5c5</color>
     <color name="gray2">#777777</color>
+    <color name="ungu_100">#392467</color>
+    <color name="ungu_200">#5D3587</color>
 </resources>

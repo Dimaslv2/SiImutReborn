@@ -1,8 +1,8 @@
 package com.example.perpus
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.example.perpus.databinding.ActivityPdfDetailBinding
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -29,7 +29,7 @@ class PdfDetailActivity : AppCompatActivity() {
 
         //handle backbutton
         binding.backBtn.setOnClickListener {
-            onBackPressed()
+            finish()
         }
 
         binding.readBookBtn.setOnClickListener {

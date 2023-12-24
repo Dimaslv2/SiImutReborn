@@ -5,13 +5,10 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Filter
-import android.widget.Filterable
 import androidx.recyclerview.widget.RecyclerView
-import com.example.perpus.databinding.ActivityPdfViewBinding
 import com.example.perpus.databinding.RowPdfUserBinding
 
-class AdapterPdfUser : RecyclerView.Adapter<AdapterPdfUser.HolderPdfUser>, Filterable{
+class AdapterPdfUser : RecyclerView.Adapter<AdapterPdfUser.HolderPdfUser>{
 
     private var context: Context
     public var pdfArrayList: ArrayList<ModelPdf>
@@ -20,7 +17,7 @@ class AdapterPdfUser : RecyclerView.Adapter<AdapterPdfUser.HolderPdfUser>, Filte
     private lateinit var binding: RowPdfUserBinding
 
 
-    private var filter: FilterPdfUser? = null
+    var filter: FilterPdfUser? = null
 
     constructor(context: Context, pdfArrayList: ArrayList<ModelPdf>) {
         this.context = context
@@ -38,12 +35,6 @@ class AdapterPdfUser : RecyclerView.Adapter<AdapterPdfUser.HolderPdfUser>, Filte
         return pdfArrayList.size
     }
 
-    override fun getFilter(): Filter {
-        if (filter == null){
-            filter = FilterPdfUser(filterList, this)
-        }
-        return filter as FilterPdfUser
-    }
 
     override fun onBindViewHolder(holder: HolderPdfUser, position: Int) {
 

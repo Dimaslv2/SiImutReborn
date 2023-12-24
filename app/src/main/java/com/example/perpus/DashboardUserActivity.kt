@@ -2,8 +2,10 @@ package com.example.perpus
 
 import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
@@ -25,6 +27,8 @@ class DashboardUserActivity : AppCompatActivity() {
     private lateinit var categoryArrayList: ArrayList<ModelCategory>
     private lateinit var viewPagerAdapter: ViewPagerAdapter
 
+    private lateinit var adapterCategory: AdapterCategory
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding= ActivityDashboardUserBinding.inflate(layoutInflater)
@@ -40,7 +44,9 @@ class DashboardUserActivity : AppCompatActivity() {
             firebaseAuth.signOut()
             startActivity(Intent(this, MainActivity::class.java))
             finish()
+
         }
+
     }
 
     private fun setupWithViewPagerAdapter(viewPager: ViewPager){
@@ -56,26 +62,6 @@ class DashboardUserActivity : AppCompatActivity() {
         ref.addListenerForSingleValueEvent(object : ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
                 categoryArrayList.clear()
-
-                val modelAll = ModelCategory("01", "ALL", 1, "")
-                val modelMostViewed = ModelCategory("01", "Most Viewed", 1, "")
-
-                categoryArrayList.add(modelAll)
-                categoryArrayList.add(modelMostViewed)
-                viewPagerAdapter.addFragment(
-                    BooksUserFragment.newInstance(
-                        "${modelAll.id}",
-                        "${modelAll.category}",
-                        "${modelAll.uid}"
-                    ), modelAll.category
-                )
-                viewPagerAdapter.addFragment(
-                    BooksUserFragment.newInstance(
-                        "${modelMostViewed.id}",
-                        "${modelMostViewed.category}",
-                        "${modelMostViewed.uid}"
-                    ), modelMostViewed.category
-                )
                 viewPagerAdapter.notifyDataSetChanged()
 
                 for (ds in snapshot.children){

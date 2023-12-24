@@ -4,12 +4,12 @@ import android.app.AlertDialog
 import android.app.ProgressDialog
 import android.content.Intent
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.activity.result.ActivityResultCallback
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
 import com.example.perpus.databinding.ActivityPdfAddBinding
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
@@ -47,7 +47,7 @@ class PdfAddActivity : AppCompatActivity() {
 
         //handle click go back
         binding.backBtn.setOnClickListener {
-            onBackPressed()
+            finish()
         }
 
         //handle click, show category pick dialog

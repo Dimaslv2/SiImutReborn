@@ -49,13 +49,16 @@
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        android:layout_margin="5dp"
-        app:tabIndicatorFullWidth="false"
-        app:tabBackground="@drawable/tab_selector"
-        app:tabIndicatorHeight="0dp"
         android:layout_below="@+id/toolbarRl"
-        app:tabMode="scrollable"/>
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@android:color/transparent"
+        app:tabBackground="@drawable/tab_selector"
+        app:tabIndicatorFullWidth="false"
+        app:tabIndicatorHeight="0dp"
+        app:tabMode="scrollable" />
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"

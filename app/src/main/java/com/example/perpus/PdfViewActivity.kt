@@ -1,12 +1,10 @@
 package com.example.perpus
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import com.example.perpus.databinding.ActivityPdfEditBinding
+import androidx.appcompat.app.AppCompatActivity
 import com.example.perpus.databinding.ActivityPdfViewBinding
-import com.google.firebase.auth.ActionCodeUrl
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -27,12 +25,13 @@ class PdfViewActivity : AppCompatActivity() {
         binding = ActivityPdfViewBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.backBt.setOnClickListener {
+            print("click")
+            finish()
+        }
+
         bookId = intent.getStringExtra("bookId")!!
         loadBookDetails()
-
-        binding.backBtn.setOnClickListener {
-            onBackPressed()
-        }
     }
 
     private fun loadBookDetails() {
@@ -49,7 +48,6 @@ class PdfViewActivity : AppCompatActivity() {
                 }
 
                 override fun onCancelled(error: DatabaseError) {
-                    TODO("Not yet implemented")
                 }
             })
     }
