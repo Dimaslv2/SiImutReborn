@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.ProfileActivity">
+    tools:context=".activities.ProfileActivity"
+    android:background="@drawable/splash"
+    >
 
     <View
         android:layout_width="match_parent"
@@ -15,7 +17,7 @@
         android:id="@+id/toolbarRl"
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
-        android:background="@drawable/shape_toolbar02">
+        android:background="@drawable/shape_toolbar01">
 
         <ImageButton
             android:id="@+id/backBtn"
@@ -35,7 +37,8 @@
             android:layout_marginTop="8dp"
             android:text="Profile"
             android:textColor="@color/white"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            />
 
         <TextView
             android:id="@+id/toolbarSubtitleTv"
@@ -63,8 +66,8 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="180dp"
-        android:background="@drawable/shape_rect01"/>
+        android:layout_marginTop="180dp"/>
+
 
     <!--shapeable imageview-->
     <com.google.android.material.imageview.ShapeableImageView
@@ -89,7 +92,9 @@
         android:text="Full Name"
         android:textColor="@color/black"
         android:textSize="18sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:background="@color/shape"
+        />
 
     <!--email-->
     <TextView
@@ -100,7 +105,9 @@
         android:layout_centerHorizontal="true"
         android:textColor="@color/black"
         android:text="abc@example.com"
-        android:textSize="12sp"/>
+        android:textSize="12sp"
+        android:background="@color/shape"
+        />
 
     <LinearLayout
         android:id="@+id/detailsLl"

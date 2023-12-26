@@ -5,14 +5,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.PdfAddActivity">
+    tools:context=".activities.PdfAddActivity"
+    android:background="@color/backgroun"
+    >
 
     <!--toolbar-->
     <RelativeLayout
         android:id="@+id/toolbarRl"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:background="@drawable/shape_button01">
+        android:background="@drawable/shape_toolbar01">
 
         <!--backbutton-->
         <ImageView
@@ -27,23 +29,24 @@
         <!--icon image-->
         <ImageView
             android:id="@+id/iconIv"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
-            android:src="@drawable/logop"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
             android:layout_centerHorizontal="true"
-            android:layout_below="@+id/backBtn"/>
+            android:src="@drawable/l"
+            />
 
         <!--title-->
         <TextView
-            android:id="@+id/titleTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add New Book"
+            android:layout_below="@id/iconIv"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
-            android:layout_below="@+id/iconIv"
-            android:textSize="28sp"
-            android:textColor="@color/white"/>
+            android:layout_marginTop="-15dp"
+            android:layout_marginBottom="500dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="TAMBAH BUKU"
+            android:textColor="@color/white"
+            android:textSize="35sp" />
 
         <!--attach pdf button-->
         <ImageButton
@@ -131,7 +134,7 @@
         android:textSize="16sp"/>
 
     <!--button upload pdf-->
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/submitBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -139,6 +142,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginTop="10dp"
+        android:background="@drawable/shape_login"
         android:text="Upload"
         android:textColor="@color/white"/>
 

@@ -79,13 +79,14 @@ class AdapterComment: RecyclerView.Adapter<AdapterComment.HolderComment> {
                     .addOnSuccessListener {
                         Toast.makeText(context, "Komen Di Hapus",Toast.LENGTH_SHORT).show()
                     }
-                    .addOnFailureListener{
-                        Toast.makeText(context, "Gagal Menghapus Komen ", Toast.LENGTH_SHORT).show()
+                    .addOnFailureListener{e->
+                        Toast.makeText(context, "Gagal Menghapus Komen ke ${e.message} ", Toast.LENGTH_SHORT).show()
                     }
             }
-            .setNegativeButton("CENCEL"){d,e ->
-
+            .setNegativeButton("CENCEL"){d, e ->
+                d.dismiss()
             }
+            .show()
     }
 
     private fun loadUserDetails(model: ModelComment, holder: AdapterComment.HolderComment) {

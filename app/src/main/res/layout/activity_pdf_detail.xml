@@ -10,7 +10,7 @@
         android:id="@+id/toolbarRl"
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
-        android:background="@drawable/shape_toolbar02">
+        android:background="@color/shape">
 
         <ImageButton
             android:id="@+id/backBtn"
@@ -32,6 +32,7 @@
     </RelativeLayout>
 
     <ScrollView
+        android:layout_above="@+id/bookOptionsLl"
         android:layout_width="match_parent"
         android:padding="10dp"
         android:layout_below="@+id/toolbarRl"
@@ -243,11 +244,12 @@
         android:layout_alignParentBottom="true"
         android:background="@color/design_default_color_primary">
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/readBookBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Baca"
+            android:background="@color/shape"
             android:drawableTop="@drawable/ic_book_white"
             android:layout_weight="1"/>
 

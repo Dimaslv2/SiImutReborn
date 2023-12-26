@@ -120,7 +120,7 @@
                 android:textColorHint="@color/gray1"
                 android:textSize="16sp"/>
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/submitBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -128,7 +128,7 @@
                 android:layout_marginEnd="30dp"
                 android:layout_marginTop="10dp"
                 android:text="Update"
-                android:background="@drawable/shape_button01"
+                android:background="@drawable/shape_login"
                 android:layout_below="@id/categoryTv"
                 android:textColor="@color/white"/>
 

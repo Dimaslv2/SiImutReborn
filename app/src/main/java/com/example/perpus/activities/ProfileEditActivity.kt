@@ -1,13 +1,10 @@
 package com.example.perpus.activities
 
 import android.app.Activity
-import android.app.AlertDialog
-import android.app.Instrumentation.ActivityResult
 import android.app.ProgressDialog
 import android.content.ContentValues
 import android.content.Intent
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
 import android.view.Menu
@@ -15,8 +12,8 @@ import android.widget.PopupMenu
 import android.widget.Toast
 import androidx.activity.result.ActivityResultCallback
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
-import com.example.perpus.MyApplication
 import com.example.perpus.R
 import com.example.perpus.databinding.ActivityProfileEditBinding
 import com.google.android.gms.tasks.Task
@@ -26,9 +23,8 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.storage.FirebaseStorage
-import java.lang.Exception
 
-class ProfileEditActivity : AppCompatActivity() {
+class   ProfileEditActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityProfileEditBinding
 

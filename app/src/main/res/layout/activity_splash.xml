@@ -6,21 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".activities.SplashActivity">
-
-    <ImageView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:src="@drawable/logop"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SiImut"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:fontFamily="sans-serif-condensed"
-        android:textColor="@color/black"
-        android:layout_marginTop="2dp"
-        />
+    tools:context=".activities.SplashActivity"
+    android:background="@drawable/splash"
+    >
 </LinearLayout>

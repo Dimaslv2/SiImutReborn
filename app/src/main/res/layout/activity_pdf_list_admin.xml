@@ -8,7 +8,7 @@
 
     <RelativeLayout
         android:id="@+id/toolbarRl"
-        android:background="@drawable/shape_toolbar02"
+        android:background="@color/shape"
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize">
 
@@ -20,8 +20,7 @@
             android:background="@android:color/transparent"
             android:layout_centerVertical="true"
             android:layout_marginStart="10dp"
-            android:padding="5dp"
-            android:contentDescription="TODO" />
+            android:padding="5dp" />
 
         <TextView
             android:id="@+id/tittleTv"
@@ -31,7 +30,8 @@
             android:textColor="@color/white"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="8dp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            />
 
         <TextView
             android:id="@+id/subTitleTv"

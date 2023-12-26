@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.LoginActivity">
+    tools:context=".activities.LoginActivity"
+    android:background="@color/backgroun"
+    >
 
     <RelativeLayout
         android:id="@+id/toolbarRl"
@@ -14,11 +16,10 @@
 
         <ImageView
             android:id="@+id/iconIv"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="40dp"
-            android:src="@drawable/logop"
+            android:src="@drawable/l"
             />
 
         <TextView
@@ -26,12 +27,12 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/iconIv"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
-            android:text="Please Login"
-            android:textColor="@color/white"
+            android:layout_marginTop="-15dp"
+            android:layout_marginBottom="500dp"
             android:fontFamily="sans-serif-condensed"
-            android:textSize="20sp"
-            />
+            android:text="LOGIN "
+            android:textColor="@color/white"
+            android:textSize="35sp" />
 
     </RelativeLayout>
 
@@ -103,14 +104,14 @@
                 android:textColor="@color/gray2"
                 />
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/loginBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/forgetTv"
                 android:text="Login"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/shape_button01"
+                android:background="@drawable/shape_login"
                 android:textColor="@color/white"
                 />
 

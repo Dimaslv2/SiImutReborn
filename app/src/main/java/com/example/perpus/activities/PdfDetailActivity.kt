@@ -137,9 +137,9 @@ class PdfDetailActivity : AppCompatActivity() {
                 progressDialog.dismiss()
                 Toast.makeText( this,"Nambahin Kommen Kamu", Toast.LENGTH_SHORT).show()
             }
-            .addOnFailureListener{
+            .addOnFailureListener{e->
                 progressDialog.dismiss()
-                Toast.makeText( this,"Gagal Nambahin Kommen kamu !!", Toast.LENGTH_SHORT).show()
+                Toast.makeText( this,"Gagal Nambahin Kommen kamu ke ${e.message}", Toast.LENGTH_SHORT).show()
             }
     }
 

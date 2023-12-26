@@ -5,7 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.CategoryAddActivity">
+    tools:context=".activities.CategoryAddActivity"
+    android:background="@color/backgroun"
+    >
 
     <!--toolbar-->
     <RelativeLayout
@@ -24,22 +26,24 @@
             android:src="@drawable/ic_back_white"/>
 
         <ImageView
-            android:id="@+id/iconTv"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:id="@+id/iconIv"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
             android:layout_centerHorizontal="true"
-            android:layout_below="@+id/backBtn"
-            android:src="@drawable/logop"/>
+            android:src="@drawable/l"
+            />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/iconIv"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="-15dp"
+            android:layout_marginBottom="500dp"
             android:fontFamily="sans-serif-condensed"
-            android:text="Tambahkan Kategori Baru"
+            android:text="TAMBAH KATEGORI"
             android:textColor="@color/white"
-            android:scrollbarSize="28sp"/>
+            android:textSize="35sp" />
 
     </RelativeLayout>
 
@@ -69,7 +73,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <!--Submit Button-->
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/submitBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -77,8 +81,8 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/shape_button01"
-        android:text="Submit"
+        android:background="@drawable/shape_login"
+        android:text="TAMBAH"
         android:textColor="@color/white"/>
 
 </RelativeLayout>

@@ -4,14 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.DashboardUserActivity">
+    tools:context=".activities.DashboardUserActivity"
+    android:background="@drawable/splash"
+    >
 
 
     <RelativeLayout
         android:id="@+id/toolbarRl"
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
-        android:background="@drawable/shape_toolbar02">
+        android:background="@drawable/shape_login">
 
         <ImageButton
             android:id="@+id/profileBtn"

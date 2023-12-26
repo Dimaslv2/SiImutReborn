@@ -9,6 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="gray1">#c5c5c5</color>
     <color name="gray2">#777777</color>
-    <color name="ungu_100">#392467</color>
-    <color name="ungu_200">#5D3587</color>
+    <color name="backgroun">#d2d3d5</color>
+    <color name="shape">#808285</color>
+    <color name="shape01">#66686a</color>
 </resources>

@@ -71,14 +71,14 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/updateBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/nameTil"
             android:textColor="@color/white"
             android:text="Update"
-            android:background="@drawable/shape_button01"
+            android:background="@drawable/shape_login"
             android:layout_marginTop="20dp"/>
 
     </RelativeLayout>
